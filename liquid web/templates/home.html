@@ -10,7 +10,10 @@
         .liquid-right {
             text-align: right;
         }
-
+        body {
+            font-family: Hind,Tahoma,sans-serif;
+            color: #444;
+        }
         /*
         给基础导航栏加上一个 高亮当前菜单 功能
         1, 给当前菜单设置 liquid-active 类
@@ -38,7 +41,7 @@
             /* 设置 inlin-block, 这样才能设置 a 的尺寸和 padding */
             display: inline-block;
             color: rgba(255, 255, 255, 0.51);
-            padding: 20px;
+            padding: 20px 10px;
             text-align: center;
             text-decoration: none;
             font-size: 15px
@@ -72,7 +75,7 @@
             color: rgba(255, 255, 255, 0.75)
         }
         body {
-            background-image: url(/static/img/background.png);
+            background-image: url(http://imglf0.nosdn.127.net/img/a0w1T01hSWwyYWM3T21vU3M2VkQxRndYM0pVWXlGN2JPWFo4RzFqdW1CQnZTWlBKMW9xUklRPT0.png?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg);
         }
         .liquid-body {
             width: 900px;
@@ -82,63 +85,81 @@
             background: #181716;
             width: 100%;
             height: 125px;
+            font-size: 15px;
+        }
+        .liquid-logo {
+            margin-top: 10px;
+            float: left;
+            width: 7%;
+            height: 9.5%;
+            cursor: pointer;
+        }
+        .liquid-logo:hover {
+            filter:alpha(Opacity=80);
+            -moz-opacity:0.8;
+            opacity: 0.8
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <a class="liquid-active" href="#">Lquid Game</a>
-            <a class="liquid-nav-item" href="#">About</a>
-            <a class="liquid-nav-item" href="#">Games</a>
-            <a class="liquid-nav-item" href="#">Careers</a>
-            <a class="liquid-nav-item" href="#">Forums</a>
-            <a class="liquid-nav-item" href="#">Contact</a>
-            <a class="liquid-store" href="#">Store</a>
-        </nav>
-        <div class="liquid-body">
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-              </ol>
-
-              <!-- Wrapper for slides -->
-              <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                  <img src="http://hddesktopwallpapers.in/wp-content/uploads/2015/11/pacman-desktop-wallpaper-900x500.png" alt="...">
-                  <div class="carousel-caption">
-                    ...
-                  </div>
-                </div>
-                <div class="item">
-                  <img src="http://hddesktopwallpapers.in/wp-content/uploads/2015/07/iron-man-live-wallpaper-900x500.png" alt="...">
-                  <div class="carousel-caption">
-                    ...
-                  </div>
-                </div>
-                <div class="item">
-                  <img src="http://hddesktopwallpapers.in/wp-content/uploads/2015/06/Lamborghini-Aventador-HD-Desktop-wallpapers-A32-900x500.png" alt="...">
-                  <div class="carousel-caption">
-                    ...
-                  </div>
-                </div>
-              </div>
-
-              <!-- Controls -->
-              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Next</span>
-              </a>
+    <nav>
+        <div class="container">
+            <img class="liquid-logo" style="width:10%" src="{{ url_for('static', filename='img/logo_font.png') }}">
+            <div style="margin-left: 123px">
+                <a class="liquid-nav-item" href="#">About</a>
+                <a class="liquid-nav-item" href="#">Games</a>
+                <a class="liquid-nav-item" href="#">Careers</a>
+                <a class="liquid-nav-item" href="#">Forums</a>
+                <a class="liquid-nav-item" href="#">Contact</a>
+                <a class="liquid-store" href="#">Store</a>
             </div>
         </div>
-        <footer>
+    </nav>
+    <div class="liquid-body">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img src="http://imglf0.nosdn.127.net/img/a0w1T01hSWwyYWM3T21vU3M2VkQxQko5ZVVFVFl6eC9yWWExQ2NuVEdDdXRTVjVySTlZdTl3PT0.png?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg" alt="">
+              <div class="carousel-caption">
+
+              </div>
+            </div>
+            <div class="item">
+              <img src="http://imglf2.nosdn.127.net/img/a0w1T01hSWwyYWM3T21vU3M2VkQxSUp5SThUSUp6MzhiRDQ0R1VMOUxmSnpVeUR0cnE3SGF3PT0.png?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg" alt="">
+              <div class="carousel-caption">
+
+              </div>
+            </div>
+            <div class="item">
+              <img src="http://imglf.nosdn.127.net/img/a0w1T01hSWwyYWM3T21vU3M2VkQxSElKakM3dVYwMzB2QXZvUTNIRmE2eUFHdUx5Y1pwZm5RPT0.png?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg" alt="">
+              <div class="carousel-caption">
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <img class="liquid-logo" src="{{ url_for('static', filename='img/logo.png') }}">
             <div class="liquid-right">
                 <a class="liquid-nav-item" href="#">Game</a>
                 <a class="liquid-nav-item" href="#">About</a>
@@ -150,7 +171,10 @@
                 <a class="liquid-nav-item" href="#">Privacy</a>
                 <a class="liquid-nav-item" href="#">YouTube & Mod Policy</a>
             </div>
-        </footer>
-    </div>
+            <div class="liquid-right" style="padding-right: 20px">
+                © All Rights Reserved Liquid Entertainment 2017
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
